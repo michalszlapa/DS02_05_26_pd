@@ -1,0 +1,26 @@
+Zadanie 3. Metryki modelu
+Utwórz słownik metryki z kluczami accuracy , precision , recall , f1_score i wartościami odpowiednio 0.94 , 0.91 , 0.89 , 0.90 . Następnie używając funkcji wbudowanych ( min , max , sum , len , sorted ):
+
+Wypisz najwyższą i najniższą wartość metryki.
+Wypisz średnią metrykę z dokładnością do 3 miejsc po przecinku.
+Wypisz klucze posortowane alfabetycznie ( sorted ).
+Wypisz wartości posortowane rosnąco.
+
+
+Zadanie 5. Operacje na dwóch zbiorach
+Dane są dwa zbiory narzędzi używanych przez dwie grupy analityków: grupa_a = {'python', 'pandas', 'numpy', 'sql', 'tableau'} grupa_b = {'python', 'r', 'sql', 'ggplot2', 'dplyr'} Używając zarówno operatorów ( | , & , - , ^ ), jak i odpowiadających im metod, wypisz:
+
+Sumę zbiorów (wszystkie narzędzia).
+Wspólne narzędzia (iloczyn).
+Narzędzia tylko w grupie A (różnica grupa_a - grupa_b ).
+Narzędzia tylko w jednej z grup (różnica symetryczna).
+Czy zbiory są rozłączne? ( .isdisjoint() )
+
+
+Zadanie 12. Pełne studium pojedynczego rekordu
+Dany jest rekord datasetu Iris w postaci krotki: rekord = ('setosa', 5.1, 3.5, 1.4, 0.2) Pierwszy element to nazwa gatunku, kolejne cztery – kolejno sepal_length, sepal_width, petal_length, petal_width.
+
+Rozpakuj rekord do zmiennych: gatunek, sl, sw, pl, pw .
+Utwórz słownik rekord_slownik, w którym kluczami są 'species', 'sepal_length', 'sepal_width', 'petal_length', 'petal_width', a wartościami odpowiednie pola krotki.
+Wypisz w formacie tabelarycznym: species : setosa sepal_length : 5.1 sepal_width : 3.5 petal_length : 1.4 petal_width : 0.2 (nazwa klucza wyrównana do lewej na 13 znakach, liczba do prawej na 5 z jednym miejscem po przecinku).
+Używając sum i slajsu krotki, wypisz sumę wszystkich czterech cech liczbowych ( sum(rekord[1:]) )

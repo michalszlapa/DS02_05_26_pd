@@ -1,0 +1,63 @@
+#### ✏️ Zadanie 7 – Długości słów (list comprehension)
+
+Masz listę słów. Używając list comprehension, stwórz nową listę zawierającą długości tych słów.
+
+**Dataset:**
+```python
+slowa = ["python", "data", "science", "machine", "learning", "AI"]
+```
+
+**Wymagania:**
+- Użyj list comprehension: `[len(slowo) for slowo in slowa]`
+
+**Oczekiwany rezultat:**
+- Lista długości: `[6, 4, 7, 7, 8, 2]`
+
+*(proste)*
+
+
+#### ✏️ Zadanie 8 – Map i filter: tylko dodatnie, podwojone
+
+Używając `map()` i `filter()` z lambda, przetwórz listę liczb: najpierw zostaw tylko dodatnie, potem podwój każdą.
+
+**Dataset:**
+```python
+liczby = [-5, 3, -2, 8, 0, -1, 7, 4, -9, 6]
+```
+
+**Wymagania:**
+- `filter()` z lambda: `x > 0`
+- `map()` z lambda: `x * 2`
+- Konwertuj wynik na listę
+
+**Oczekiwany rezultat:**
+- Lista: `[6, 16, 14, 8, 12]` (tylko dodatnie i podwojone)
+
+*(proste)*
+
+
+#### 🧠 Zadanie 13 – Pipeline przetwarzania danych sprzedażowych
+
+Stwórz kompletny pipeline do analizy danych sprzedażowych. Dane zawierają: dzień, kategoria, liczba transakcji, wartość.
+
+**Dataset:**
+```python
+sprzedaz = [
+    (1, "elektronika", 45, 12500),
+    (1, "odziez",      78,  4200),
+    (2, "elektronika", 52, 15200),
+    # ... więcej danych dla 7 dni
+]
+```
+
+**Wymagania:**
+- Funkcja `tuple_to_dict()` – konwersja tuple na dict
+- Funkcja `dodaj_srednia_transakcje()` – feature engineering
+- Funkcja `agreguj_po_kategorii()` – suma wartości per kategoria
+- Użyj comprehensions do przetwarzania
+- Sortowanie kategorii według wartości (malejąco)
+
+**Oczekiwany rezultat:**
+- Ranking kategorii z sumą wartości sprzedaży
+
+*(challenge)*

@@ -1,0 +1,47 @@
+✏️ Zadanie 2 – Suma liczb dodatnich
+
+Masz listę temperatury: [-5, 3, -2, 8, 12, -1, 6, 0, 15, -3]. Oblicz sumę tylko dodatnich wartości używając pętli for i instrukcji warunkowej.
+
+Wymagania:
+
+Użyj zmiennej suma = 0
+W pętli sprawdzaj if temp > 0:
+Dodaj tylko dodatnie wartości do sumy
+Oczekiwany rezultat:
+
+Wyświetlenie sumy dodatnich temperatur
+Liczba dodatnich pomiarów
+(proste)
+
+✏️ Zadanie 5 – Suma liczb w zakresie
+
+Oblicz sumę wszystkich liczb od 1 do 50 używając pętli while.
+
+Wymagania:
+
+Zmienne: suma = 0, i = 1
+while i <= 50:
+Dodaj i do sumy i zwiększ i += 1
+Sprawdź wynik wzorem: n*(n+1)/2 = 50*51/2 = 1275
+Oczekiwany rezultat:
+
+Suma: 1275
+(proste)
+
+✏️ Zadanie 12 – Walidacja numeru PESEL (uproszczona)
+
+Sprawdź poprawność sum kontrolnych dla listy numerów PESEL (symulacja): ["92041812345", "85010154321", "78121698765"]. Użyj pętli do iteracji po cyfrach.
+
+Dataset:
+
+Lista 3 numerów PESEL (string)
+Wymagania:
+
+Dla każdego PESEL iteruj po cyfrach
+Sprawdź długość (11 cyfr)
+Sprawdź czy wszystkie znaki to cyfry
+Oznacz jako "poprawny format" lub "błędny format"
+Oczekiwany rezultat:
+
+Raport walidacji dla każdego numeru
+(średnie)

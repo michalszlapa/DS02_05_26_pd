@@ -1,23 +1,62 @@
-Treśći zadań pracy domowej lekcja05:
-✏️ Zadanie 7 – Zliczanie wystąpień
+# 📝 Lekcja 05: Zadania domowe
 
-Masz listę predykcji: ['spam', 'ham', 'spam', 'spam', 'ham', 'ham', 'spam']. Policz ile jest 'spam' i ile 'ham' używając metody count().
+---
 
-(proste)
+## 🟢 Zadanie 7 – Zliczanie wystąpień
+**Poziom:** Łatwe
 
-✏️ Zadanie 9 – Filtrowanie outlierów
+Masz do dyspozycji listę z wynikami predykcji modelu klasyfikacyjnego:
 
-Masz listę pomiarów: [23, 24, 22, 150, 23, 25, -10, 24, 23]. Outlierem jest wartość poza zakresem [20, 30]. Stwórz nową listę bez outlierów używając list comprehension.
+```python
+predykcje = ['spam', 'ham', 'spam', 'spam', 'ham', 'ham', 'spam']
+```
 
-🧠 Zadanie 14 – Ranking modeli
+**Twoje zadanie:**
+* Policz, ile razy na liście występuje słowo `'spam'`.
+* Policz, ile razy na liście występuje słowo `'ham'`.
+* **Warunek:** Użyj do tego wbudowanej metody `.count()`.
 
-Masz listę wyników modeli:
+---
 
-models = [
-    ('LogisticRegression', 0.78, 1.2),
-    ('RandomForest', 0.92, 45.6),
-    ('SVM', 0.85, 12.3),
-    ('XGBoost', 0.95, 67.8)
+## 🟡 Zadanie 9 – Confusion Matrix i metryki oceny modelu
+**Poziom:** Średnie
+
+W uczeniu maszynowym tablica pomyłek (*Confusion Matrix*) pozwala ocenić jakość klasyfikatora. Masz następującą macierz dla klasyfikacji binarnej (zapisaną jako lista list):
+
+```python
+cm = [
+    [80, 10],  # [TN, FP] -> True Negatives, False Positives
+    [5, 45]    # [FN, TP] -> False Negatives, True Positives
 ]
-# Format: (nazwa, accuracy, czas_treningu_s)
-Stwórz ranking modeli według "efficiency score" = accuracy / log10(czas). Posortuj malejąco i wyświetl top 3.
+```
+
+**Twoje zadanie:**
+1. **Ekstrakcja:** Wyciągnij wartości `TN`, `FP`, `FN` oraz `TP` z macierzy `cm` za pomocą indeksowania dwuwymiarowego (w formacie `cm[wiersz][kolumna]`).
+2. **Obliczenia:** Wykorzystując wyciągnięte zmienne, oblicz trzy kluczowe metryki:
+   * $Accuracy = \frac{TP + TN}{TP + TN + FP + FN}$
+   * $Precision = \frac{TP}{TP + FP}$
+   * $Recall = \frac{TP}{TP + FN}$
+3. **Formatowanie:** Wyświetl wyniki w konsoli sformatowane jako wartości procentowe z dokładnie **dwoma miejscami po przecinku** (np. `85.50%`).
+
+---
+
+## 🔴 Zadanie 14 – Ekstrakcja metadanych ze ścieżki pliku
+**Poziom:** Zaawansowane / Ambitne
+
+Podczas przygotowania danych (*data preprocessing*) często musimy wyciągać informacje bezpośrednio z nazw plików i ich ścieżek. Masz podaną następującą zmienną:
+
+```python
+sciezka = "/data/processed/2024/experiment_42_v3.csv"
+```
+
+**Twoje zadanie:**
+Używając wyłącznie metody `.split('/')`, indeksowania kolekcji oraz podstawowych metod obiektów typu string, wyodrębnij ze ścieżki następujące informacje:
+* **Nazwę pliku:** `"experiment_42_v3.csv"`
+* **Katalog wyjściowy:** `"/data/processed/2024"`
+* **Nazwę pliku bez rozszerzenia:** `"experiment_42_v3"`
+* **Rozszerzenie pliku:** `".csv"`
+* **Rok z katalogu:** `"2024"`
+
+**Wymaganie estetyczne:**
+Wszystkie wyciągnięte dane wyświetl w jednym, czytelnym raporcie. Użyj do tego **f-stringów z jawnym wyrównaniem tekstu** (np. do prawej lub lewej strony za pomocą znaczników `<`, `>` lub `^`), aby kolumny raportu idealnie równały się w konsoli.
+```
