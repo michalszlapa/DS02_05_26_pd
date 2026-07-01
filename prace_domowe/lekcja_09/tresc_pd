@@ -1,0 +1,270 @@
+🧪 Zadania do samodzielnej pracy
+✏️ Zadania podstawowe (1-8)
+✏️ Zadanie 1 – Tworzenie klasy Produkt
+
+Stwórz klasę Produkt z atrybutami: nazwa, cena, ilosc_w_magazynie.
+
+Dodaj metody:
+
+pokaz_info() – wyświetla informacje o produkcie
+sprzedaj(ilosc) – zmniejsza ilosc_w_magazynie o podaną wartość
+dostawa(ilosc) – zwiększa ilosc_w_magazynie
+Stwórz 3 obiekty i przetestuj metody.
+
+(proste)
+
+✏️ Zadanie 2 – Klasa Kalkulator
+
+Stwórz klasę Kalkulator z metodami: dodaj(a, b), odejmij(a, b), pomnoz(a, b), podziel(a, b).
+
+Stwórz obiekt i wykonaj przykładowe obliczenia.
+
+(proste)
+
+✏️ Zadanie 3 – Klasa BankAccount
+
+Stwórz klasę BankAccount z atrybutami: wlasciciel, saldo.
+
+Metody:
+
+wplac(kwota) – zwiększa saldo
+wyplac(kwota) – zmniejsza saldo (tylko jeśli wystarczy środków)
+pokaz_saldo() – wyświetla saldo
+Stwórz kilka kont i przetestuj operacje.
+
+(proste)
+
+✏️ Zadanie 4 – Klasa Ksiazka
+
+Stwórz klasę Ksiazka z atrybutami: tytul, autor, rok_wydania, liczba_stron.
+
+Dodaj metodę __str__(), która zwraca czytelną reprezentację książki.
+
+Stwórz listę 5 książek i wyświetl je używając print().
+
+(proste)
+
+✏️ Zadanie 5 – Klasa Student
+
+Stwórz klasę Student z atrybutami: imie, numer_indeksu, oceny (lista ocen).
+
+Metody:
+
+dodaj_ocene(ocena) – dodaje ocenę do listy
+srednia() – zwraca średnią ocen
+__str__() – reprezentacja tekstowa
+Stwórz 3 studentów, dodaj im oceny i wyświetl średnie.
+
+(proste)
+
+✏️ Zadanie 6 – Dziedziczenie – Pojazd i Samochod
+
+Stwórz klasę bazową Pojazd z atrybutami: marka, model, rok.
+
+Stwórz klasę potomną Samochod z dodatkowym atrybutem liczba_drzwi.
+
+Dodaj metodę pokaz_info() w obu klasach.
+
+Stwórz obiekt Samochod i wywołaj metodę.
+
+(proste)
+
+✏️ Zadanie 7 – Klasa Pracownik
+
+Stwórz klasę Pracownik z atrybutami: imie, stanowisko, pensja.
+
+Metody:
+
+podwyzka(procent) – zwiększa pensję o procent%
+__str__() – reprezentacja tekstowa
+Stwórz 3 pracowników i daj im podwyżki.
+
+(proste)
+
+✏️ Zadanie 8 – Klasa Zadanie (TODO list)
+
+Stwórz klasę Zadanie z atrybutami: opis, status (domyślnie "do zrobienia").
+
+Metody:
+
+oznacz_jako_zrobione() – zmienia status na "zrobione"
+__str__() – wyświetla opis i status
+Stwórz listę 5 zadań i oznacz część jako zrobione.
+
+(proste)
+
+✏️ Zadania średnie (9-12)
+✏️ Zadanie 9 – Pipeline z wieloma krokami
+
+Stwórz 4 komponenty:
+
+FiltrowanieDodatnich – usuwa liczby ujemne
+Zaokraglanie – zaokrągla do całkowitych
+Skalowanie – mnoży przez stały współczynnik
+Sumowanie – zwraca sumę listy
+Stwórz klasę Pipeline i przetestuj na danych: [1.7, -3.2, 5.8, -1.1, 8.3, 2.4]
+
+(średnie)
+
+✏️ Zadanie 10 – Klasa Zamowienie z kompozycją
+
+Stwórz klasę Produkt (nazwa, cena) oraz klasę Zamowienie, która zawiera listę produktów.
+
+Metody Zamowienie:
+
+dodaj_produkt(produkt, ilosc)
+laczna_wartosc() – suma wartości zamówienia
+pokaz_zamowienie() – wyświetla wszystkie produkty i łączną wartość
+Stwórz zamówienie z 5 produktami.
+
+(średnie)
+
+✏️ Zadanie 11 – System ocen uczniów
+
+Stwórz klasy:
+
+Uczen (imie, oceny=[])
+Klasa (nazwa, uczniowie=[])
+Metody Klasa:
+
+dodaj_ucznia(uczen)
+srednia_klasy() – średnia ocen wszystkich uczniów
+najlepszy_uczen() – zwraca ucznia z najwyższą średnią
+Stwórz klasę z 5 uczniami i oblicz statystyki.
+
+(średnie)
+
+✏️ Zadanie 12 – Dziedziczenie – FiguraGeometryczna
+
+Stwórz klasę bazową Figura z metodą pole().
+
+Stwórz klasy potomne:
+
+Prostokat(szerokosc, wysokosc)
+Kolo(promien)
+Każda klasa implementuje pole().
+
+Stwórz listę figur i oblicz łączne pole.
+
+(średnie)
+
+🧠 Zadania wyzwanie (13-20)
+🧠 Zadanie 13 – System biblioteki
+
+Stwórz system zarządzania biblioteką:
+
+Klasa Ksiazka (tytul, autor, dostepna=True)
+Klasa Uzytkownik (imie, wypozyczone_ksiazki=[])
+Klasa Biblioteka (ksiazki=[], uzytkownicy=[])
+Metody Biblioteka:
+
+dodaj_ksiazke(ksiazka)
+zarejestruj_uzytkownika(uzytkownik)
+wypozycz(uzytkownik, ksiazka) – zmienia dostepna=False, dodaje do wypozyczone_ksiazki
+zwroc(uzytkownik, ksiazka) – odwrotna operacja
+raport() – wyświetla statystyki
+Zasymuluj wypożyczenia i zwroty dla 3 użytkowników i 10 książek.
+
+(challenge)
+
+🧠 Zadanie 14 – Pipeline ML z różnymi transformerami
+
+Zaimplementuj:
+
+LogTransformer – log(x + 1)
+OutlierRemover – usuwa wartości > 3*std od średniej
+BinningTransformer – dzieli na przedziały (bins)
+Stwórz pipeline i przetestuj na danych: [1, 5, 10, 100, 2, 3, 8, 200, 4, 6]
+
+(challenge)
+
+🧠 Zadanie 15 – Symulator portfela inwestycyjnego
+
+Klasy:
+
+Akcja (nazwa, cena_kupna, cena_aktualna)
+Portfel (akcje=[], kapital_poczatkowy)
+Metody Portfel:
+
+kup_akcje(akcja, ilosc)
+sprzedaj_akcje(akcja, ilosc)
+aktualizuj_ceny(slownik_cen) – aktualizuje cena_aktualna
+wartosc_portfela() – łączna wartość
+zysk_strata() – różnica względem kapitału początkowego
+Zasymuluj kupno/sprzedaż 5 akcji z różnymi zmianami cen.
+
+(challenge)
+
+🧠 Zadanie 16 – Dziedziczenie wielopoziomowe – Zwierzęta
+
+Struktura:
+
+Zwierze (nazwa, wiek)
+Ssak(Zwierze) (typ_futra)
+Pies(Ssak) (rasa)
+Każda klasa ma metodę pokaz_info() wyświetlającą wszystkie atrybuty.
+
+Stwórz obiekt Pies i wywołaj metodę.
+
+(challenge)
+
+🧠 Zadanie 17 – System rezerwacji hotelu
+
+Klasy:
+
+Pokoj (numer, typ, cena_za_noc, zajety=False)
+Rezerwacja (pokoj, data_od, data_do, gosc)
+Hotel (pokoje=[], rezerwacje=[])
+Metody Hotel:
+
+dodaj_pokoj(pokoj)
+rezerwuj(numer_pokoju, gosc, data_od, data_do) – tworzy rezerwację
+wolne_pokoje() – lista wolnych pokoi
+przychod() – suma przychodów ze wszystkich rezerwacji
+Zasymuluj 10 pokoi i 5 rezerwacji.
+
+(challenge)
+
+🧠 Zadanie 18 – Pipeline z walidacją danych
+
+Stwórz komponenty:
+
+ValidatorZakresu(min, max) – sprawdza, czy wartości w zakresie
+ValidatorTypu(typ) – sprawdza, czy wszystkie wartości są danego typu
+ValidatorBrakow – sprawdza, czy nie ma None/NaN
+Każdy validator zwraca (True/False, komunikat).
+
+Pipeline agreguje wyniki walidacji.
+
+(challenge)
+
+🧠 Zadanie 19 – Gra RPG z klasami postaci
+
+Klasy:
+
+Postac (imie, hp, atak, obrona)
+Wojownik(Postac) – zwiększony atak
+Mag(Postac) – umiejętność rzucania czarów
+Lucznik(Postac) – zwiększona szybkość
+Metody:
+
+atakuj(cel) – zadaje obrażenia
+leczenie(punkty) – przywraca HP
+Zasymuluj walkę 3 postaci.
+
+(challenge)
+
+🧠 Zadanie 20 – Ekosystem transformerów danych
+
+Stwórz hierarchię:
+
+BaseTransformer (klasa bazowa z metodą transform(dane))
+DropNullTransformer – usuwa None
+ClipTransformer(min, max) – ogranicza wartości do zakresu
+SquareTransformer – podnosi do kwadratu
+InverseTransformer – 1/x
+Stwórz Pipeline z 4 transformerami i przetestuj na danych.
+
+Dodaj metodę pipeline.fit_transform(dane) analogiczną do scikit-learn.
+
+(challenge)
